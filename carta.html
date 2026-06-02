@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title data-es="Carta · Los Cuchillos" data-en="Menu · Los Cuchillos">Carta · Los Cuchillos</title>
+<meta name="description" content="La carta de Los Cuchillos: entrantes, guisos caseros, arroces, carnes, pescados, postres y bodega. Almansa, desde 1973." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="index.html" aria-label="Los Cuchillos"><b>Los Cuchillos</b><span>Restaurante</span></a>
+  <ul class="nav-links">
+    <li><a data-nav="index.html" href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+    <li><a data-nav="carta.html" href="carta.html" data-es="Carta" data-en="Menu">Carta</a></li>
+    <li><a data-nav="restaurante.html" href="restaurante.html" data-es="El Restaurante" data-en="The Restaurant">El Restaurante</a></li>
+    <li><a data-nav="contacto.html" href="contacto.html" data-es="Reservas" data-en="Reservations">Reservas</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="en">EN</button></div>
+    <a class="nav-cta" href="tel:+34611462382" data-es="Reservar" data-en="Book">Reservar</a>
+    <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+  <a href="carta.html" data-es="Carta" data-en="Menu">Carta</a>
+  <a href="restaurante.html" data-es="El Restaurante" data-en="The Restaurant">El Restaurante</a>
+  <a href="contacto.html" data-es="Reservas" data-en="Reservations">Reservas</a>
+  <div class="mm-foot"><a href="tel:+34611462382" style="border:0;padding:0;font-family:var(--font-sans);font-size:.95rem">611 46 23 82</a></div>
+</div>
+
+<!-- HERO interior -->
+<header class="phero" style="min-height:58svh">
+  <div class="phero__media"><img data-parallax="0.12" src="assets/torreznos.png" alt="Torreznos crujientes" /></div>
+  <div class="wrap phero__inner">
+    <span class="eyebrow reveal" data-es="La carta" data-en="The menu">La carta</span>
+    <h1 class="display reveal d1" style="margin-top:18px;font-size:clamp(2.6rem,7vw,6rem)" data-es="Nuestra cocina" data-en="Our kitchen">Nuestra cocina</h1>
+    <p class="lead reveal d2" style="max-width:48ch;margin-top:18px" data-es="Producto de la tierra y de temporada. Tradición servida con cuidado." data-en="Produce of the land and the season. Tradition served with care.">Producto de la tierra y de temporada. Tradición servida con cuidado.</p>
+  </div>
+</header>
+
+<!-- ÍNDICE -->
+<nav class="menu-nav" aria-label="Secciones de la carta">
+  <ul>
+    <li><a href="#entrantes" data-es="Entrantes" data-en="Starters">Entrantes</a></li>
+    <li><a href="#guisos" data-es="Guisos caseros" data-en="Home stews">Guisos caseros</a></li>
+    <li><a href="#arroces" data-es="Arroces y fideuá" data-en="Rice & fideuá">Arroces y fideuá</a></li>
+    <li><a href="#carnes" data-es="Carnes" data-en="Meats">Carnes</a></li>
+    <li><a href="#pescados" data-es="Pescados" data-en="Fish">Pescados</a></li>
+    <li><a href="#postres" data-es="Postres" data-en="Desserts">Postres</a></li>
+    <li><a href="#bodega" data-es="Bodega" data-en="Wine list">Bodega</a></li>
+  </ul>
+</nav>
+
+<!-- ENTRANTES -->
+<section class="section wrap menu-section" id="entrantes" style="padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">I</span><h2 data-es="Entrantes" data-en="Starters">Entrantes</h2><span class="line"></span></div>
+    <div class="menu-cols">
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Jamón ibérico de bellota 100% · 100 g" data-en="100% acorn-fed Iberian ham · 100 g">Jamón ibérico de bellota 100% · 100 g</span><span class="mitem__desc">Juan Manuel</span></div><span class="mitem__price">24,50 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Tabla de quesos" data-en="Cheese board">Tabla de quesos</span><span class="mitem__desc">Romero, Idiazábal, Moluengo y Tête de Moine</span></div><span class="mitem__price">16 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Pulpo a la brasa con parmentier" data-en="Char-grilled octopus with parmentier">Pulpo a la brasa con parmentier</span></div><span class="mitem__price">19 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Sepia a la plancha" data-en="Griddled cuttlefish">Sepia a la plancha</span><span class="mitem__desc" data-es="Fresca" data-en="Fresh">Fresca</span></div><span class="mitem__price">14 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Calamar a la plancha con ajetes" data-en="Griddled squid with young garlic">Calamar a la plancha con ajetes</span></div><span class="mitem__price">13 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Tellinas al pilpil" data-en="Wedge clams al pilpil">Tellinas al pilpil</span></div><span class="mitem__price">16 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Bacalao ajoarriero" data-en="Cod ajoarriero">Bacalao ajoarriero</span></div><span class="mitem__price">14 €</span></div>
+      </div>
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Flor de alcachofa" data-en="Artichoke flower">Flor de alcachofa</span><span class="mitem__desc" data-es="Sobre parmentier trufada y crujiente de jamón ibérico de bellota 100%" data-en="Over truffled parmentier and crisp 100% acorn-fed Iberian ham">Sobre parmentier trufada y crujiente de jamón ibérico de bellota 100%</span></div><span class="mitem__price">6,50 € / ud</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Zamburiñas" data-en="Variegated scallops">Zamburiñas</span></div><span class="mitem__price">3 € / ud</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Gambones al ajillo" data-en="Garlic king prawns">Gambones al ajillo</span></div><span class="mitem__price">13,50 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Croqueta de cecina" data-en="Cecina croquette">Croqueta de cecina</span></div><span class="mitem__price">3,20 € / ud</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Croqueta de jamón 100% bellota" data-en="100% acorn-fed ham croquette">Croqueta de jamón 100% bellota</span><span class="mitem__desc" data-es="Con velo de papada y palomitas de torrezno" data-en="With a veil of cured jowl and torrezno popcorn">Con velo de papada y palomitas de torrezno</span></div><span class="mitem__price">3,80 € / ud</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Torrezno de Soria" data-en="Torrezno from Soria">Torrezno de Soria</span></div><span class="mitem__price">14 €</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUISOS -->
+<section class="section wrap menu-section" id="guisos" style="padding-top:0;padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">II</span><h2 data-es="Guisos caseros" data-en="Home stews">Guisos caseros</h2><span class="line"></span></div>
+    <div class="menu-list">
+      <div class="mitem"><div><span class="mitem__name" data-es="Gazpacho manchego" data-en="Manchego gazpacho">Gazpacho manchego</span><span class="mitem__desc" data-es="La receta de siempre, a fuego lento" data-en="Our time-honoured recipe, slow-cooked">La receta de siempre, a fuego lento</span></div><span class="mitem__price">15,50 €</span></div>
+      <div class="mitem"><div><span class="mitem__name" data-es="Gazpacho marinero" data-en="Seafood gazpacho">Gazpacho marinero</span><span class="mitem__desc" data-es="Con producto del mar" data-en="With produce of the sea">Con producto del mar</span></div><span class="mitem__price">18,50 €</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE arroces -->
+<section class="feature" style="min-height:64svh">
+  <div class="feature__media"><img data-parallax="0.08" src="assets/paella.png" alt="Arroz de la casa" /></div>
+  <div class="wrap" style="width:100%">
+    <div class="feature__inner reveal">
+      <span class="eyebrow" data-es="La especialidad" data-en="The speciality">La especialidad</span>
+      <h2 class="h-xl" style="margin-top:18px" data-es="Arroces y fideuá" data-en="Rice & fideuá">Arroces y fideuá</h2>
+      <hr class="hairline" />
+      <p class="lead" data-es="Se elaboran al momento, en su punto meloso. Recomendamos encargarlos al reservar." data-en="Cooked to order, perfectly soupy. We recommend ordering them when you book.">Se elaboran al momento, en su punto meloso. Recomendamos encargarlos al reservar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARROCES Y FIDEUÁ -->
+<section class="section wrap menu-section" id="arroces" style="padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">III</span><h2 data-es="Arroces y fideuá" data-en="Rice & fideuá">Arroces y fideuá</h2><span class="line"></span></div>
+    <p class="menu-note" data-es="Elaborados al momento y por encargo. Consúltanos las variedades del día — arroz meloso de marisco, a banda, de bogavante, de pollo y conejo, y nuestra fideuá marinera." data-en="Made to order and on request. Ask us for today's varieties — soupy seafood rice, arroz a banda, lobster rice, chicken and rabbit, and our seafood fideuá.">Elaborados al momento y por encargo. Consúltanos las variedades del día — arroz meloso de marisco, a banda, de bogavante, de pollo y conejo, y nuestra fideuá marinera.</p>
+  </div>
+</section>
+
+<!-- CARNES -->
+<section class="section wrap menu-section" id="carnes" style="padding-top:0;padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">IV</span><h2 data-es="Carnes" data-en="Meats">Carnes</h2><span class="line"></span></div>
+    <div class="menu-cols">
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Chuletas de cordero lechal manchego" data-en="Manchego suckling lamb chops">Chuletas de cordero lechal manchego</span><span class="mitem__desc" data-es="Fresco" data-en="Fresh">Fresco</span></div><span class="mitem__price">21 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Paletilla de cordero lechal" data-en="Shoulder of suckling lamb">Paletilla de cordero lechal</span></div><span class="mitem__price">36 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Codillo alemán" data-en="German pork knuckle">Codillo alemán</span></div><span class="mitem__price">18 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Carrillada ibérica con parmentier" data-en="Iberian pork cheek with parmentier">Carrillada ibérica con parmentier</span></div><span class="mitem__price">18 €</span></div>
+      </div>
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Entrecot" data-en="Entrecôte">Entrecot</span><span class="tag-v" data-es="Selección premium" data-en="Premium selection">Selección premium</span></div><span class="mitem__price">24 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Solomillo de ternera" data-en="Beef tenderloin">Solomillo de ternera</span><span class="tag-v" data-es="Selección premium" data-en="Premium selection">Selección premium</span></div><span class="mitem__price">25 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Chuletón Simmental vacuno" data-en="Simmental beef rib steak">Chuletón Simmental vacuno</span></div><span class="mitem__price">64 € / kg</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PESCADOS -->
+<section class="section wrap menu-section" id="pescados" style="padding-top:0;padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">V</span><h2 data-es="Pescados" data-en="Fish">Pescados</h2><span class="line"></span></div>
+    <div class="menu-list">
+      <div class="mitem"><div><span class="mitem__name" data-es="Bacalao gratinado" data-en="Gratinated cod">Bacalao gratinado</span></div><span class="mitem__price">14 €</span></div>
+      <div class="mitem"><div><span class="mitem__name" data-es="Dorada a la espalda" data-en="Butterflied sea bream">Dorada a la espalda</span></div><span class="mitem__price">14 €</span></div>
+      <div class="mitem"><div><span class="mitem__name" data-es="Rodaballo al pilpil" data-en="Turbot al pilpil">Rodaballo al pilpil</span></div><span class="mitem__price">21 €</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTRES -->
+<section class="section wrap menu-section" id="postres" style="padding-top:0;padding-bottom:clamp(40px,6vw,72px)">
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">VI</span><h2 data-es="Postres" data-en="Desserts">Postres</h2><span class="line"></span></div>
+    <div class="menu-cols">
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Sorbete" data-en="Sorbet">Sorbete</span><span class="mitem__desc" data-es="Limón, piña, mango o coco" data-en="Lemon, pineapple, mango or coconut">Limón, piña, mango o coco</span></div><span class="mitem__price">5 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Cóctel de frutas con helado" data-en="Fruit cocktail with ice cream">Cóctel de frutas con helado</span><span class="mitem__desc" data-es="Frutas frescas de temporada en un cóctel vibrante, con cremoso helado de mango" data-en="Fresh seasonal fruit in a vibrant cocktail, with creamy mango ice cream">Frutas frescas de temporada en un cóctel vibrante, con cremoso helado de mango</span></div><span class="mitem__price">6 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Cookie volcano" data-en="Cookie volcano">Cookie volcano</span><span class="mitem__desc" data-es="Galleta templada de doble chocolate belga, helado de cookies and cream, sirope crujiente de chocolate y caramelo salado" data-en="Warm double Belgian-chocolate cookie, cookies-and-cream ice cream, crisp chocolate syrup and salted caramel">Galleta templada de doble chocolate belga, helado de cookies and cream, sirope crujiente de chocolate y caramelo salado</span></div><span class="mitem__price">7 €</span></div>
+      </div>
+      <div class="menu-list">
+        <div class="mitem"><div><span class="mitem__name" data-es="Tarta de queso al horno" data-en="Baked cheesecake">Tarta de queso al horno</span><span class="mitem__desc" data-es="Nuestra versión artesanal, con helado de vainilla" data-en="Our artisan version, with vanilla ice cream">Nuestra versión artesanal, con helado de vainilla</span></div><span class="mitem__price">6,50 €</span></div>
+        <div class="mitem"><div><span class="mitem__name" data-es="Tiramisú" data-en="Tiramisu">Tiramisú</span><span class="mitem__desc" data-es="Clásico, con mascarpone italiano, suave y cremoso" data-en="Classic, with Italian mascarpone, smooth and creamy">Clásico, con mascarpone italiano, suave y cremoso</span></div><span class="mitem__price">6,50 €</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE bodega -->
+<section class="feature" style="min-height:58svh">
+  <div class="feature__media"><img data-parallax="0.08" src="assets/coctel.png" alt="Copa de vino" /></div>
+  <div class="wrap" style="width:100%">
+    <div class="feature__inner reveal">
+      <span class="eyebrow" data-es="La bodega" data-en="The cellar">La bodega</span>
+      <h2 class="h-xl" style="margin-top:18px" data-es="Vinos de la tierra y más allá" data-en="Wines of the land and beyond">Vinos de la tierra y más allá</h2>
+      <hr class="hairline" />
+      <p class="lead" data-es="De Almansa a Ribera del Duero. Una selección que mira primero a nuestra denominación y se abre a las grandes referencias." data-en="From Almansa to Ribera del Duero. A selection that looks first to our own appellation and opens out to the great names.">De Almansa a Ribera del Duero. Una selección que mira primero a nuestra denominación y se abre a las grandes referencias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BODEGA -->
+<section class="section wrap menu-section" id="bodega">
+  <!-- TINTOS -->
+  <div class="menu-block reveal">
+    <div class="menu-head"><span class="idx">VII</span><h2 data-es="Vinos tintos" data-en="Red wines">Vinos tintos</h2><span class="line"></span></div>
+    <div class="menu-cols">
+      <div>
+        <div class="wine-region" data-es="D.O. Almansa" data-en="D.O. Almansa">D.O. Almansa</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Cueva del Chamán Roble</span><span class="mitem__grape">Garnacha Tintorera</span></div><span class="mitem__price">14 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Gold Rupestre</span><span class="mitem__grape">Garnacha Tintorera</span></div><span class="mitem__price">24 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">El Vigía de la Atalaya</span><span class="mitem__grape">Garnacha Tintorera</span></div><span class="mitem__price">13 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Laya</span><span class="mitem__grape">Garnacha Tintorera y Monastrell</span></div><span class="mitem__price">13 €</span></div>
+        </div>
+        <div class="wine-region" data-es="D.O. Valencia" data-en="D.O. Valencia">D.O. Valencia</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Maduresa</span><span class="mitem__grape">Monastrell y Cariñena</span></div><span class="mitem__price">25 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Parotet</span><span class="mitem__grape">Mandó y Arcos</span></div><span class="mitem__price">24,50 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Safrá</span><span class="mitem__grape">Mandó y Arcos</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Vermell</span><span class="mitem__grape">Garnacha Tintorera y Mandó</span></div><span class="mitem__price">14 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">La Pebrella</span><span class="mitem__grape">Arcos y Forcallá</span></div><span class="mitem__price">38 €</span></div>
+        </div>
+        <div class="wine-region" data-es="D.O. Utiel-Requena" data-en="D.O. Utiel-Requena">D.O. Utiel-Requena</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Bobos</span><span class="mitem__grape">Bobal</span></div><span class="mitem__price">36 €</span></div>
+        </div>
+        <div class="wine-region" data-es="D.O. Jumilla" data-en="D.O. Jumilla">D.O. Jumilla</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Juan Gil Etiqueta Amarilla</span><span class="mitem__grape">Monastrell</span></div><span class="mitem__price">17 €</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="wine-region" data-es="D.O. Ribera del Duero" data-en="D.O. Ribera del Duero">D.O. Ribera del Duero</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Finca Resalso</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">18 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Melior de Matarromera</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Carmelo Rodero Crianza</span><span class="mitem__grape">Tempranillo y Cabernet Sauvignon</span></div><span class="mitem__price">34 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Pago de los Capellanes Crianza</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">38 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Tomás Postigo 3.er Año</span><span class="mitem__grape">Cabernet Sauvignon, Merlot y Malbec</span></div><span class="mitem__price">49 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">PSI</span><span class="mitem__grape">Tempranillo y Garnacha</span></div><span class="mitem__price">60 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Traslascuestas · 8 meses roble</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Traslascuestas · 16 meses crianza</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">24 €</span></div>
+        </div>
+        <div class="wine-region" data-es="D.O.Ca. Rioja" data-en="D.O.Ca. Rioja">D.O.Ca. Rioja</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Hacienda López de Haro</span><span class="mitem__grape">Tempranillo y Mazuelo</span></div><span class="mitem__price">16 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Martínez Lacuesta</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">19,50 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Arienzo de Marqués de Riscal</span><span class="mitem__grape">Tempranillo y Graciano</span></div><span class="mitem__price">18 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Pierola Crianza</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Vitium</span><span class="mitem__grape">Tempranillo</span></div><span class="mitem__price">32 €</span></div>
+        </div>
+        <div class="wine-region" data-es="D.O. Toro" data-en="D.O. Toro">D.O. Toro</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Almirez</span><span class="mitem__grape">Tinta de Toro</span></div><span class="mitem__price">36 €</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLANCOS Y ROSADOS -->
+  <div class="menu-block reveal">
+    <div class="menu-cols">
+      <div>
+        <div class="menu-head"><span class="idx">VIII</span><h2 data-es="Vinos blancos" data-en="White wines">Vinos blancos</h2><span class="line"></span></div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">O Luar do Sil</span><span class="mitem__grape">Godello</span></div><span class="mitem__price">24 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Quinta do Sil</span><span class="mitem__grape">Godello</span></div><span class="mitem__price">20 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">José Pariente</span><span class="mitem__grape">Verdejo</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">De Alberto</span><span class="mitem__grape">Verdejo</span></div><span class="mitem__price">16 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Gessamí</span><span class="mitem__grape">Muscat, Sauvignon Blanc y Gewürztraminer</span></div><span class="mitem__price">21 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Tarima</span><span class="mitem__grape">Merseguera y Moscatel</span></div><span class="mitem__price">16 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Libalis</span><span class="mitem__grape">Moscatel de grano menudo, Malvasía y Viura</span></div><span class="mitem__price">14 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Martín Códax</span><span class="mitem__grape">Albariño</span></div><span class="mitem__price">22 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Granbazán Etiqueta Verde</span><span class="mitem__grape">Albariño</span></div><span class="mitem__price">22 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Cullerot</span><span class="mitem__grape">Macabeo, Malvasía y Verdil</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">FYA BS</span><span class="mitem__grape">Viura y Malvasía</span></div><span class="mitem__price">16 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Cyatho</span><span class="mitem__grape">Verdejo</span></div><span class="mitem__price">16 €</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="menu-head"><span class="idx">IX</span><h2 data-es="Vinos rosados" data-en="Rosé wines">Vinos rosados</h2><span class="line"></span></div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Les Prunes</span><span class="mitem__grape">Blanc de Mandó</span></div><span class="mitem__price">19 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Les Danses</span><span class="mitem__grape">Blanc de Mandó</span></div><span class="mitem__price">27 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Cueva del Chamán</span><span class="mitem__grape">Syrah y Merlot</span></div><span class="mitem__price">14 €</span></div>
+        </div>
+        <div class="menu-head" style="margin-top:46px"><span class="idx">X</span><h2 data-es="Cavas y sidras" data-en="Cava & cider">Cavas y sidras</h2><span class="line"></span></div>
+        <div class="wine-region" data-es="Cavas y champagne" data-en="Cava & champagne">Cavas y champagne</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">Dominio de Requena</span></div><span class="mitem__price">16,50 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Brut Noc Prestige</span></div><span class="mitem__price">34 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Moët &amp; Chandon Impérial</span></div><span class="mitem__price">64 €</span></div>
+        </div>
+        <div class="wine-region" data-es="Sidras" data-en="Cider">Sidras</div>
+        <div class="menu-list">
+          <div class="mitem wine"><div><span class="mitem__name">El Gaitero</span></div><span class="mitem__price">8,50 €</span></div>
+          <div class="mitem wine"><div><span class="mitem__name">Trabanco</span></div><span class="mitem__price">8 €</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="center reveal" style="margin-top:clamp(40px,6vw,72px)">
+    <p class="muted" style="max-width:54ch;margin-inline:auto" data-es="La carta cambia con la temporada y el mercado. Disponemos también de menú del día. Para arroces por encargo y grupos, reserva con antelación." data-en="The menu changes with the season and the market. A menu of the day is also available. For rice to order and groups, please book ahead.">La carta cambia con la temporada y el mercado. Disponemos también de menú del día. Para arroces por encargo y grupos, reserva con antelación.</p>
+    <div style="margin-top:30px"><a class="btn btn--solid" href="tel:+34611462382" data-es="Reservar · 611 46 23 82" data-en="Book · 611 46 23 82">Reservar · 611 46 23 82</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand"><b>Los Cuchillos</b><p data-es="Cocina tradicional de la tierra en Almansa desde 1973." data-en="Traditional food of the land in Almansa since 1973.">Cocina tradicional de la tierra en Almansa desde 1973.</p></div>
+      <div><h4 data-es="Visítanos" data-en="Visit us">Visítanos</h4><a href="https://maps.google.com/?q=C.+Campo,+76,+02640+Almansa,+Albacete" target="_blank" rel="noopener">C. Campo, 76<br />02640 Almansa, Albacete</a><a href="tel:+34611462382">611 46 23 82</a><a href="https://www.instagram.com/restauranteloscuchillos/" target="_blank" rel="noopener">Instagram</a></div>
+      <div><h4 data-es="Carta" data-en="Menu">Carta</h4><a href="carta.html" data-es="Ver la carta" data-en="View the menu">Ver la carta</a><a href="restaurante.html" data-es="El restaurante" data-en="The restaurant">El restaurante</a><a href="contacto.html" data-es="Reservas y horario" data-en="Reservations & hours">Reservas y horario</a></div>
+    </div>
+    <div class="footer__bot"><span>© 2026 Restaurante Los Cuchillos</span><span data-es="Almansa · Albacete · España" data-en="Almansa · Albacete · Spain">Almansa · Albacete · España</span></div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
