@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lodesiko12.github.io/Web-Los-Cuchillos/sitemap.xml
