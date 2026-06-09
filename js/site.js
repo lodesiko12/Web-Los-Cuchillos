@@ -160,4 +160,73 @@
       });
     }, { passive: true });
   }
+
+  /* ---------- Mapa: carga al hacer clic (RGPD) ---------- */
+  function loadMap(box) {
+    if (!box || box.dataset.loaded) return;
+    var src = box.getAttribute("data-map-src");
+    if (!src) return;
+    var f = document.createElement("iframe");
+    f.src = src;
+    f.title = "Mapa Los Cuchillos";
+    f.loading = "lazy";
+    f.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    f.setAttribute("allowfullscreen", "");
+    box.innerHTML = "";
+    box.appendChild(f);
+    box.dataset.loaded = "1";
+  }
+  var mapBox = document.getElementById("mapEmbed");
+  if (mapBox) {
+    var mapBtn = mapBox.querySelector("[data-map-load]");
+    if (mapBtn) mapBtn.addEventListener("click", function () { loadMap(mapBox); });
+  }
+
+  /* ---------- Consentimiento de cookies ---------- */
+  var CONSENT_KEY = "lc-consent";
+  function getConsent() { try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(CONSENT_KEY, v); } catch (e) {} }
+  function applyConsent(v) {
+    if (v === "accepted") {
+      if (mapBox) loadMap(mapBox);
+      // loadAnalytics();  // <-- activa aquí tu analítica sin cookies (Plausible/Umami) si la usas
+    }
+  }
+  function buildBanner() {
+    var lang = document.documentElement.getAttribute("lang") === "en" ? "en" : "es";
+    var T = {
+      es: { txt: "Usamos cookies propias (técnicas) y, solo si lo aceptas, de terceros (Google Maps). Más información en la ", pol: "Política de cookies", acc: "Aceptar", rej: "Rechazar" },
+      en: { txt: "We use our own (technical) cookies and, only if you accept, third-party ones (Google Maps). More info in our ", pol: "Cookie policy", acc: "Accept", rej: "Reject" }
+    }[lang];
+    var bar = document.createElement("div");
+    bar.className = "cookie";
+    bar.setAttribute("role", "dialog");
+    bar.setAttribute("aria-label", lang === "en" ? "Cookies" : "Cookies");
+    bar.innerHTML =
+      '<div class="cookie__in">' +
+        '<p class="cookie__txt">' + T.txt + '<a href="cookies.html">' + T.pol + '</a>.</p>' +
+        '<div class="cookie__btns">' +
+          '<button class="btn" type="button" data-c="reject">' + T.rej + '</button>' +
+          '<button class="btn btn--solid" type="button" data-c="accept">' + T.acc + '</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(bar);
+    requestAnimationFrame(function () { bar.classList.add("show"); });
+    bar.addEventListener("click", function (e) {
+      var c = e.target.getAttribute("data-c");
+      if (!c) return;
+      setConsent(c === "accept" ? "accepted" : "rejected");
+      if (c === "accept") applyConsent("accepted");
+      bar.classList.remove("show");
+      setTimeout(function () { bar.remove(); }, 500);
+    });
+  }
+  var consent = getConsent();
+  if (consent) applyConsent(consent);
+  else buildBanner();
+
+  // Reabrir/cambiar consentimiento (botón en la página de cookies)
+  window.LC_resetConsent = function () { try { localStorage.removeItem(CONSENT_KEY); } catch (e) {} location.reload(); };
+  var resetBtn = document.getElementById("reset-consent");
+  if (resetBtn) resetBtn.addEventListener("click", window.LC_resetConsent);
 })();
