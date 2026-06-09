@@ -28,9 +28,7 @@
 <meta name="twitter:description" content="Cocina tradicional de la tierra en Almansa desde 1973: arroces, brasa y producto de temporada." />
 <meta name="twitter:image" content="https://lodesiko12.github.io/Web-Los-Cuchillos/og-image.jpg" />
 <link rel="preload" as="image" href="assets/quesos.webp" fetchpriority="high" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts/fonts.css" />
 <link rel="stylesheet" href="css/site.css" />
 <script type="application/ld+json">
 {
@@ -140,6 +138,9 @@
     </div>
   </div>
 </section>
+
+<!-- ============ MENÚ DEL DÍA (dinámico desde Google Sheets) ============ -->
+<section class="section wrap" id="menudia-home"></section>
 
 <!-- ============ PLATOS DESTACADOS ============ -->
 <section class="section wrap">
@@ -253,11 +254,17 @@
     </div>
     <div class="footer__bot">
       <span>© 2026 Restaurante Los Cuchillos</span>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="aviso-legal.html" data-es="Aviso legal" data-en="Legal notice">Aviso legal</a>
+        <a href="privacidad.html" data-es="Privacidad" data-en="Privacy">Privacidad</a>
+        <a href="cookies.html" data-es="Cookies" data-en="Cookies">Cookies</a>
+      </nav>
       <span data-es="Almansa · Albacete · España" data-en="Almansa · Albacete · Spain">Almansa · Albacete · España</span>
     </div>
   </div>
 </footer>
 
 <script src="js/site.js"></script>
+<script src="js/menu.js" defer></script>
 </body>
 </html>

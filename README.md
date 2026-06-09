@@ -10,11 +10,21 @@ index.html            Inicio (hero con slideshow, intro, platos, producto, CTA r
 carta.html            Carta completa con precios + bodega (índice sticky)
 restaurante.html      Historia, filosofía y el espacio
 contacto.html         Reservas (tel/WhatsApp), horario y mapa
+aviso-legal.html      Aviso legal (LSSI)
+privacidad.html       Política de privacidad (RGPD/LOPDGDD)
+cookies.html          Política de cookies + botón para revocar consentimiento
+404.html              Página de error personalizada
 css/site.css          Sistema visual completo (tokens, componentes, responsive)
-js/site.js            Interacción (nav, idioma, reveal, parallax, slideshow, horario)
+js/site.js            Interacción (nav, idioma, reveal, parallax, slideshow, horario, cookies, mapa)
+js/menu.js            Lee la carta y el menú del día desde Google Sheets (CSV) y los pinta
+data/carta.csv        Carta de EJEMPLO/respaldo (la real saldrá del Google Sheet)
+data/menu-dia.csv     Menú del día de EJEMPLO/respaldo
+data/GUIA-CARTA.md    Guía para el dueño: cómo editar carta y menú del día
 assets/               Fotografía de producto y logo (WebP)
+fonts/                Tipografías auto-alojadas (WOFF2) + fonts.css
 sitemap.xml           Mapa del sitio para buscadores
 robots.txt            Reglas de rastreo + referencia al sitemap
+.htaccess             Caché, compresión y seguridad (solo Apache/Hostinger; GitHub lo ignora)
 favicon.ico/.svg      Iconos del sitio (pestaña del navegador)
 apple-touch-icon.png  Icono para iOS / accesos directos
 og-image.jpg          Imagen 1200×630 al compartir en redes (WhatsApp, Facebook…)
@@ -70,7 +80,9 @@ Cuando tengas tu dominio definitivo (p. ej. `https://www.loscuchillos.es`), haz 
 **buscar y reemplazar** de esa cadena por la nueva en estos archivos:
 
 ```
-index.html · carta.html · restaurante.html · contacto.html · sitemap.xml · robots.txt
+index.html · carta.html · restaurante.html · contacto.html
+aviso-legal.html · privacidad.html · cookies.html
+sitemap.xml · robots.txt
 ```
 
 (Reemplaza la base SIN barra final; el `/` de las rutas ya está puesto. Para el dominio raíz,
@@ -84,6 +96,48 @@ con el mismo nombre, dirección y teléfono (NAP) — es lo que más posiciona a
 - Datos estructurados: [Rich Results Test](https://search.google.com/test/rich-results)
 - Vista previa al compartir: [opengraph.xyz](https://www.opengraph.xyz/)
 - Rendimiento: [PageSpeed Insights](https://pagespeed.web.dev/)
+
+## Carta y menú del día editables (Google Sheets)
+
+La **carta de comida** y el **menú del día** se generan dinámicamente desde un Google Sheet
+publicado como CSV, para que el restaurante los edite sin tocar código (cambian a diario).
+
+- **Cómo lo edita el dueño**: ver `data/GUIA-CARTA.md` (pensada para no técnicos).
+- **Cómo se conecta** (una vez): publica las pestañas del Sheet como CSV
+  (*Archivo → Compartir → Publicar en la web → CSV*) y pega las 2 URLs en
+  `js/menu.js`, en `MENU_SOURCES` (arriba del archivo). Mientras tanto, usa los CSV de
+  ejemplo en `data/`.
+- **Qué es dinámico**: menú del día (Inicio + Carta) y la carta de comida
+  (entrantes, guisos, arroces, carnes, pescados, postres).
+- **Qué es estático**: la **bodega** (vinos), que cambia poco. Se puede pasar al Sheet si se desea.
+- **Robustez**: estados de carga y de error; si el Sheet falla, muestra un aviso para llamar por
+  teléfono en lugar de romperse. El índice de secciones y los datos estructurados `Menu` (SEO)
+  se generan automáticamente desde los datos.
+- **SEO**: el contenido de la carta pasa a cargarse por JavaScript (Google lo renderiza e indexa).
+  Lo que más posiciona —título, meta-descripción y ficha `Restaurant`— sigue estático en el HTML.
+- ⏱️ Los cambios en el Sheet tardan unos minutos en propagarse (caché de Google).
+
+## Legal y cookies
+
+- **Páginas legales**: `aviso-legal.html`, `privacidad.html`, `cookies.html` (enlazadas en el
+  footer de todas las páginas). ⚠️ **Contienen marcadores `[COMPLETAR: …]`** (NIF/CIF, razón
+  social, email). Busca `[COMPLETAR` y rellena tus datos fiscales antes de publicar.
+  *(No es asesoramiento jurídico; para algo crítico que lo revise un profesional.)*
+- **Banner de cookies** (en `js/site.js`): aparece en la 1.ª visita, con "Aceptar"/"Rechazar"
+  por igual. Guarda la decisión en `localStorage['lc-consent']`.
+- **Google Maps con carga al clic**: el mapa NO se carga (ni pone cookies) hasta que el usuario
+  pulsa "Ver el mapa" o acepta las cookies. Cumple la guía de la AEPD.
+- **Fuentes auto-alojadas** (`fonts/`): ya no se piden a Google → más rápido y sin transferir
+  IPs a servidores de Google (evita el problema legal de Google Fonts).
+
+## Analítica (opcional, sin cookies)
+
+No hay analítica activada. Para añadir una **sin cookies** (no requiere consentimiento):
+1. Crea una cuenta en **Plausible** o **Umami** y copia su script.
+2. En `js/site.js`, dentro de `applyConsent()`, hay un marcador `// loadAnalytics();`.
+   Para analítica sin cookies puedes cargar el script directamente en el `<head>` (no hace
+   falta esperar al consentimiento). Si usas Google Analytics (con cookies), entonces sí debe
+   cargarse solo tras "Aceptar".
 
 ## Datos del negocio
 

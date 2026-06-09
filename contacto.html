@@ -26,9 +26,7 @@
 <meta name="twitter:title" content="Reservas y contacto · Los Cuchillos, Almansa" />
 <meta name="twitter:description" content="Reserva por teléfono o WhatsApp: 611 46 23 82. C. Campo 76, Almansa." />
 <meta name="twitter:image" content="https://lodesiko12.github.io/Web-Los-Cuchillos/og-image.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="fonts/fonts.css" />
 <link rel="stylesheet" href="css/site.css" />
 <script type="application/ld+json">
 [
@@ -74,6 +72,18 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://lodesiko12.github.io/Web-Los-Cuchillos/" },
     { "@type": "ListItem", "position": 2, "name": "Reservas", "item": "https://lodesiko12.github.io/Web-Los-Cuchillos/contacto.html" }
+  ]
+},
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Hacéis arroces por encargo?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Nuestros arroces y la fideuá se elaboran al momento, en su punto meloso. Recomendamos encargarlos al hacer la reserva." } },
+    { "@type": "Question", "name": "¿Tenéis menú del día?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, disponemos de menú del día además de la carta. La carta cambia con la temporada y el mercado." } },
+    { "@type": "Question", "name": "¿Qué días abrís? ¿Cerráis alguno?", "acceptedAnswer": { "@type": "Answer", "text": "Abrimos de jueves a martes; los miércoles permanecemos cerrados. Viernes y sábado abrimos también por la noche (20:30–24:00)." } },
+    { "@type": "Question", "name": "¿Se puede reservar para grupos o celebraciones?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Disponemos de dos comedores, uno reservado para celebraciones, comidas de empresa y grupos. Avísanos al reservar y preparamos un menú a medida." } },
+    { "@type": "Question", "name": "¿Cómo reservo mesa?", "acceptedAnswer": { "@type": "Answer", "text": "Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web." } },
+    { "@type": "Question", "name": "¿Dónde estáis y hay aparcamiento?", "acceptedAnswer": { "@type": "Answer", "text": "Estamos en C. Campo, 76, 02640 Almansa (Albacete), en pleno centro. Hay aparcamiento cercano en Rambla Centro." } }
   ]
 }
 ]
@@ -152,10 +162,48 @@
 
     <!-- columna mapa -->
     <div class="reveal d1">
-      <iframe class="map" title="Mapa Los Cuchillos" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://maps.google.com/maps?q=C.%20Campo%2076%2C%2002640%20Almansa%2C%20Albacete&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe>
+      <div class="map" id="mapEmbed" data-map-src="https://maps.google.com/maps?q=C.%20Campo%2076%2C%2002640%20Almansa%2C%20Albacete&t=&z=16&ie=UTF8&iwloc=&output=embed">
+        <div class="map__ph">
+          <p data-es="Mostramos la ubicación con Google Maps, que puede instalar cookies de terceros." data-en="We display the location with Google Maps, which may set third-party cookies.">Mostramos la ubicación con Google Maps, que puede instalar cookies de terceros.</p>
+          <button class="btn" type="button" data-map-load data-es="Ver el mapa" data-en="Show the map">Ver el mapa</button>
+        </div>
+      </div>
       <p class="muted" style="margin-top:18px;font-size:.92rem" data-es="En pleno centro de Almansa, a un paso de la estación. Aparcamiento cercano en Rambla Centro." data-en="In the heart of Almansa, steps from the station. Nearby parking at Rambla Centro.">En pleno centro de Almansa, a un paso de la estación. Aparcamiento cercano en Rambla Centro.</p>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section wrap" id="faq" style="padding-top:0">
+  <div class="center reveal" style="margin-bottom:clamp(40px,6vw,64px)">
+    <span class="eyebrow" data-es="Dudas" data-en="Questions">Dudas</span>
+    <h2 class="h-lg" style="margin-top:14px" data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+  </div>
+  <div class="faq reveal">
+    <details class="faq__item">
+      <summary data-es="¿Hacéis arroces por encargo?" data-en="Do you make rice dishes to order?">¿Hacéis arroces por encargo?</summary>
+      <p data-es="Sí. Nuestros arroces y la fideuá se elaboran al momento, en su punto meloso. Recomendamos encargarlos al hacer la reserva." data-en="Yes. Our rices and fideuá are cooked to order, perfectly soupy. We recommend ordering them when you book.">Sí. Nuestros arroces y la fideuá se elaboran al momento, en su punto meloso. Recomendamos encargarlos al hacer la reserva.</p>
+    </details>
+    <details class="faq__item">
+      <summary data-es="¿Tenéis menú del día?" data-en="Do you have a daily set menu?">¿Tenéis menú del día?</summary>
+      <p data-es="Sí, disponemos de menú del día además de la carta. La carta cambia con la temporada y el mercado." data-en="Yes, we offer a daily set menu in addition to the à la carte. The menu changes with the season and the market.">Sí, disponemos de menú del día además de la carta. La carta cambia con la temporada y el mercado.</p>
+    </details>
+    <details class="faq__item">
+      <summary data-es="¿Qué días abrís? ¿Cerráis alguno?" data-en="What days are you open? Any closing day?">¿Qué días abrís? ¿Cerráis alguno?</summary>
+      <p data-es="Abrimos de jueves a martes; los miércoles permanecemos cerrados. Viernes y sábado abrimos también por la noche (20:30–24:00)." data-en="We open Thursday to Tuesday; we are closed on Wednesdays. On Friday and Saturday we also open in the evening (8:30–12:00 pm).">Abrimos de jueves a martes; los miércoles permanecemos cerrados. Viernes y sábado abrimos también por la noche (20:30–24:00).</p>
+    </details>
+    <details class="faq__item">
+      <summary data-es="¿Se puede reservar para grupos o celebraciones?" data-en="Can I book for groups or celebrations?">¿Se puede reservar para grupos o celebraciones?</summary>
+      <p data-es="Sí. Disponemos de dos comedores, uno reservado para celebraciones, comidas de empresa y grupos. Avísanos al reservar y preparamos un menú a medida." data-en="Yes. We have two dining rooms, one reserved for celebrations, business lunches and groups. Let us know when booking and we will prepare a tailored menu.">Sí. Disponemos de dos comedores, uno reservado para celebraciones, comidas de empresa y grupos. Avísanos al reservar y preparamos un menú a medida.</p>
+    </details>
+    <details class="faq__item">
+      <summary data-es="¿Cómo reservo mesa?" data-en="How do I book a table?">¿Cómo reservo mesa?</summary>
+      <p data-es="Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web." data-en="By phone or WhatsApp at +34 611 46 23 82. We do not take bookings through a web form.">Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web.</p>
+    </details>
+    <details class="faq__item">
+      <summary data-es="¿Dónde estáis y hay aparcamiento?" data-en="Where are you and is there parking?">¿Dónde estáis y hay aparcamiento?</summary>
+      <p data-es="Estamos en C. Campo, 76, 02640 Almansa (Albacete), en pleno centro. Hay aparcamiento cercano en Rambla Centro." data-en="We are at C. Campo, 76, 02640 Almansa (Albacete), right in the centre. There is nearby parking at Rambla Centro.">Estamos en C. Campo, 76, 02640 Almansa (Albacete), en pleno centro. Hay aparcamiento cercano en Rambla Centro.</p>
+    </details>
   </div>
 </section>
 
@@ -181,7 +229,15 @@
       <div><h4 data-es="Visítanos" data-en="Visit us">Visítanos</h4><a href="https://maps.google.com/?q=C.+Campo,+76,+02640+Almansa,+Albacete" target="_blank" rel="noopener">C. Campo, 76<br />02640 Almansa, Albacete</a><a href="tel:+34611462382">611 46 23 82</a><a href="https://www.instagram.com/restauranteloscuchillos/" target="_blank" rel="noopener">Instagram</a></div>
       <div><h4 data-es="Carta" data-en="Menu">Carta</h4><a href="carta.html" data-es="Ver la carta" data-en="View the menu">Ver la carta</a><a href="restaurante.html" data-es="El restaurante" data-en="The restaurant">El restaurante</a><a href="contacto.html" data-es="Reservas y horario" data-en="Reservations & hours">Reservas y horario</a></div>
     </div>
-    <div class="footer__bot"><span>© 2026 Restaurante Los Cuchillos</span><span data-es="Almansa · Albacete · España" data-en="Almansa · Albacete · Spain">Almansa · Albacete · España</span></div>
+    <div class="footer__bot">
+      <span>© 2026 Restaurante Los Cuchillos</span>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="aviso-legal.html" data-es="Aviso legal" data-en="Legal notice">Aviso legal</a>
+        <a href="privacidad.html" data-es="Privacidad" data-en="Privacy">Privacidad</a>
+        <a href="cookies.html" data-es="Cookies" data-en="Cookies">Cookies</a>
+      </nav>
+      <span data-es="Almansa · Albacete · España" data-en="Almansa · Albacete · Spain">Almansa · Albacete · España</span>
+    </div>
   </div>
 </footer>
 
