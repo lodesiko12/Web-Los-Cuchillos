@@ -520,4 +520,11 @@ p{ text-wrap:pretty; }
 #reservar{ scroll-margin-top:90px; }
 /* reserva hueco hasta que el script monta el iframe (evita saltos de layout) */
 #reservas-widget:not([data-reservas-mounted]){ min-height:620px; }
-#reservas-widget iframe{ border-radius:2px; }
+#reservas-widget iframe{ border-radius:0; }
+
+/* Marco del widget: panel oscuro con doble filete bronce, a juego con el resto de la web */
+.booking{ position:relative; max-width:568px; margin-inline:auto; padding:clamp(12px,2.6vw,22px);
+  background:var(--bg-2); border:1px solid var(--line-2); }
+.booking::before{ content:""; position:absolute; inset:5px; border:1px solid var(--accent-soft); pointer-events:none; }
+/* Mientras el widget siga siendo claro: suaviza el blanco puro a un crema cálido */
+.booking--light #reservas-widget iframe{ filter:sepia(.16) saturate(.8) brightness(.95); }
