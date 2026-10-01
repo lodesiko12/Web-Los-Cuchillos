@@ -139,7 +139,8 @@
     var nav = document.getElementById("carta-index");
     if (!nav) return;
     var items = [];
-    if (document.getElementById("menudia")) items.push('<li><a href="#menudia">Menú del día</a></li>');
+    var md = document.getElementById("menudia");
+    if (md && md.style.display !== "none") items.push('<li><a href="#menudia">Menú del día</a></li>');
     links.forEach(function (l) { items.push('<li><a href="#' + l.id + '">' + esc(l.label) + "</a></li>"); });
     if (document.getElementById("bodega")) items.push('<li><a href="#bodega">Bodega</a></li>');
     nav.innerHTML = '<nav class="menu-nav" aria-label="Secciones de la carta"><ul>' + items.join("") + "</ul></nav>";
@@ -201,19 +202,25 @@
      ============================================================ */
   function renderMenuDia(objs, el, opts) {
     opts = opts || {};
-    var price = "", notes = [], order = [], groups = {};
+    var price = "", notes = [], order = [], groups = {}, hidden = false;
     objs.forEach(function (o) {
       var grp = pick(o, ["grupo", "seccion", "section", "tipo"]);
       var plato = pick(o, ["plato", "nombre", "name"]);
       var desc = pick(o, ["descripcion", "description", "desc"]);
       var g = norm(grp);
+      if (g === "mostrar") { if (/^(no|0|false|oculto|cerrado)$/.test(norm(plato))) hidden = true; return; }
       if (g === "precio") { if (plato) price = plato; return; }
       if (g === "nota") { if (plato) notes.push(plato); return; }
       if (!grp || !plato) return;
       if (!groups[grp]) { groups[grp] = []; order.push(grp); }
       groups[grp].push({ name: plato, desc: desc });
     });
-    if (!order.length && !price) { el.style.display = "none"; return; }
+    if (hidden || (!order.length && !price)) {
+      el.style.display = "none";
+      var lk = document.querySelector('.menu-index a[href="#menudia"], a[href="#menudia"]');
+      if (lk && lk.parentNode && lk.parentNode.tagName === "LI") lk.parentNode.style.display = "none";
+      return;
+    }
 
     var cols = order.map(function (grp) {
       var lis = groups[grp].map(function (it) {

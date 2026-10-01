@@ -35,6 +35,9 @@ Columnas: **Grupo**, **Plato**, **Descripción**.
 - Dos grupos especiales:
   - `Precio` → en **Plato** escribe el precio del menú. Ej.: `15,90 € · pan, bebida y postre incluidos`.
   - `Nota` → en **Plato** escribe un aviso. Ej.: `Disponible de lunes a viernes al mediodía`.
+- **Días sin menú**: añade una fila con Grupo `Mostrar` y en **Plato** `No`. El menú del día
+  desaparece de la web (Inicio y Carta). Para volver a mostrarlo, borra esa fila (o pon `Sí`).
+  Si dejas la pestaña totalmente vacía, también se oculta.
 - El **viernes de tapas**: añade un grupo nuevo (ej. `Tapas`) con sus platos, o usa una nota.
 
 ---
