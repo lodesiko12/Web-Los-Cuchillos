@@ -12,7 +12,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="stylesheet" href="fonts/fonts.css" />
-<link rel="stylesheet" href="css/site.css" />
+<link rel="stylesheet" href="css/site.css?v=4" />
 </head>
 <body>
 
@@ -26,7 +26,7 @@
   </ul>
   <div class="nav-right">
     <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="en">EN</button></div>
-    <a class="nav-cta" href="tel:+34611462382" data-es="Reservar" data-en="Book">Reservar</a>
+    <a class="nav-cta" href="contacto.html#reservar" data-es="Reservar" data-en="Book">Reservar</a>
     <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -58,11 +58,12 @@
     </ul>
 
     <h2>2. ¿Qué datos tratamos y con qué finalidad?</h2>
-    <p>Este sitio web <strong>no dispone de formularios</strong> ni recoge datos automáticamente
-    con fines comerciales. Tratamos datos personales únicamente en estos casos:</p>
+    <p>Este sitio web <strong>no recoge datos con fines comerciales</strong> ni utiliza herramientas de
+    seguimiento publicitario. Tratamos datos personales únicamente en estos casos:</p>
     <table>
       <thead><tr><th>Tratamiento</th><th>Datos</th><th>Finalidad</th><th>Base legal</th></tr></thead>
       <tbody>
+        <tr><td>Reserva online (formulario de la página de Reservas)</td><td>Los datos que introduces al reservar (p. ej. nombre, contacto, fecha, hora y número de comensales)</td><td>Gestionar tu reserva y comunicarnos contigo sobre ella</td><td>Ejecución de un contrato / medidas precontractuales (art. 6.1.b RGPD)</td></tr>
         <tr><td>Reservas y consultas por teléfono o WhatsApp</td><td>Nombre, teléfono y los datos que facilites en la conversación</td><td>Gestionar tu reserva o responder a tu consulta</td><td>Ejecución de un contrato / consentimiento (art. 6.1.b y 6.1.a RGPD)</td></tr>
         <tr><td>Contacto por correo electrónico</td><td>Nombre, email y contenido del mensaje</td><td>Atender tu solicitud</td><td>Consentimiento (art. 6.1.a RGPD)</td></tr>
         <tr><td>Navegación</td><td>Datos técnicos mínimos (ver Política de cookies)</td><td>Funcionamiento del sitio y, si lo autorizas, medición</td><td>Interés legítimo / consentimiento</td></tr>
@@ -78,6 +79,7 @@
     <p>No se ceden datos a terceros salvo obligación legal. Para el funcionamiento del sitio
     intervienen proveedores que actúan como encargados del tratamiento:</p>
     <ul>
+      <li><strong>Sistema de reservas online (Turnigo):</strong> gestiona los datos que introduces en el formulario de reserva. Infraestructura en Cloudflare, Inc. y Supabase, Inc. <span class="placeholder">[COMPLETAR: confirmar con el proveedor del sistema de reservas su razón social, los datos exactos que trata y su ubicación]</span></li>
       <li><strong>Proveedor de alojamiento web:</strong> <span class="placeholder">[COMPLETAR: p. ej. Hostinger International Ltd. / GitHub, Inc.]</span></li>
       <li><strong>Google Ireland Ltd.</strong> — mapa de Google Maps (solo si aceptas cargarlo).</li>
       <li><strong>Meta Platforms / WhatsApp e Instagram</strong> — si decides contactar por esas vías.</li>
@@ -121,6 +123,6 @@
   </div>
 </footer>
 
-<script src="js/site.js"></script>
+<script src="js/site.js?v=2"></script>
 </body>
 </html>

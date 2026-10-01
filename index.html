@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="https://lodesiko12.github.io/Web-Los-Cuchillos/og-image.jpg" />
 <link rel="preload" as="image" href="assets/quesos.webp" fetchpriority="high" />
 <link rel="stylesheet" href="fonts/fonts.css" />
-<link rel="stylesheet" href="css/site.css" />
+<link rel="stylesheet" href="css/site.css?v=4" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,7 +45,7 @@
   "servesCuisine": ["Mediterránea", "Tradicional española", "Arroces", "Carnes a la brasa"],
   "foundingDate": "1973",
   "currenciesAccepted": "EUR",
-  "acceptsReservations": true,
+  "acceptsReservations": "https://lodesiko12.github.io/Web-Los-Cuchillos/contacto.html",
   "hasMenu": "https://lodesiko12.github.io/Web-Los-Cuchillos/carta.html",
   "address": {
     "@type": "PostalAddress",
@@ -88,7 +88,7 @@
       <button data-lang="es" class="on">ES</button>
       <button data-lang="en">EN</button>
     </div>
-    <a class="nav-cta" href="tel:+34611462382" data-es="Reservar" data-en="Book">Reservar</a>
+    <a class="nav-cta" href="contacto.html#reservar" data-es="Reservar" data-en="Book">Reservar</a>
     <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -222,10 +222,10 @@
     <div class="reveal" style="max-width:720px;margin-inline:auto">
       <span class="eyebrow" data-es="Reservas" data-en="Reservations">Reservas</span>
       <h2 class="h-xl" style="margin:20px 0 28px" data-es="Reserva tu mesa" data-en="Book your table">Reserva tu mesa</h2>
-      <p class="lead" data-es="Atendemos reservas por teléfono y WhatsApp. Estaremos encantados de prepararte un arroz por encargo." data-en="We take reservations by phone and WhatsApp. We will gladly prepare a rice to order for you.">Atendemos reservas por teléfono y WhatsApp. Estaremos encantados de prepararte un arroz por encargo.</p>
+      <p class="lead" data-es="Reserva online en unos pasos o llámanos. Estaremos encantados de prepararte un arroz por encargo." data-en="Book online in a few steps or give us a call. We will gladly prepare a rice to order for you.">Reserva online en unos pasos o llámanos. Estaremos encantados de prepararte un arroz por encargo.</p>
       <div class="hero__cues" style="margin-top:34px">
-        <a class="btn btn--solid" href="tel:+34611462382">611 46 23 82</a>
-        <a class="btn" href="https://wa.me/34611462382" target="_blank" rel="noopener" data-es="WhatsApp" data-en="WhatsApp">WhatsApp</a>
+        <a class="btn btn--solid" href="contacto.html#reservar" data-es="Reservar mesa" data-en="Book a table">Reservar mesa</a>
+        <a class="btn" href="tel:+34611462382">611 46 23 82</a>
       </div>
     </div>
   </div>
@@ -264,7 +264,7 @@
   </div>
 </footer>
 
-<script src="js/site.js"></script>
-<script src="js/menu.js" defer></script>
+<script src="js/site.js?v=2"></script>
+<script src="js/menu.js?v=3" defer></script>
 </body>
 </html>

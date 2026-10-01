@@ -28,6 +28,13 @@
     var r = ""; for (var i = 0; i < map.length; i++) { while (n >= map[i][0]) { r += map[i][1]; n -= map[i][0]; } } return r;
   }
   function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+  // separa "20,90 € · pan y bebida" -> {amount:"20,90 €", extra:"pan y bebida"} (no parte por la coma decimal)
+  function splitPrice(p) {
+    p = (p == null ? "" : p).toString().trim();
+    var m = p.match(/^(.*?€)\s*[·\-–—|:]\s*(.+)$/);
+    if (m) return { amount: m[1].trim(), extra: m[2].trim() };
+    return { amount: p, extra: "" };
+  }
 
   /* ---------- parser CSV robusto (comillas, comas, saltos) ---------- */
   function parseCSV(text) {
@@ -194,14 +201,14 @@
      ============================================================ */
   function renderMenuDia(objs, el, opts) {
     opts = opts || {};
-    var price = "", note = "", order = [], groups = {};
+    var price = "", notes = [], order = [], groups = {};
     objs.forEach(function (o) {
       var grp = pick(o, ["grupo", "seccion", "section", "tipo"]);
       var plato = pick(o, ["plato", "nombre", "name"]);
       var desc = pick(o, ["descripcion", "description", "desc"]);
       var g = norm(grp);
-      if (g === "precio") { price = plato; return; }
-      if (g === "nota") { note = plato; return; }
+      if (g === "precio") { if (plato) price = plato; return; }
+      if (g === "nota") { if (plato) notes.push(plato); return; }
       if (!grp || !plato) return;
       if (!groups[grp]) { groups[grp] = []; order.push(grp); }
       groups[grp].push({ name: plato, desc: desc });
@@ -215,14 +222,18 @@
       return '<div class="menudia__group"><h3>' + esc(grp) + "</h3><ul>" + lis + "</ul></div>";
     }).join("");
 
+    // separa el importe (ej. "20,90 €") del texto largo (ej. "pan, bebida y postre incluidos")
+    var sp = splitPrice(price);
+
     var cta = opts.cta ? '<div style="margin-top:28px"><a class="link-line" href="carta.html#menudia">Ver carta y menú del día</a></div>' : "";
     el.innerHTML =
       '<div class="menudia in">' +
         '<div class="menudia__top">' +
           '<span class="eyebrow">Menú del día</span>' +
-          (price ? '<span class="menudia__price">' + esc(price) + "</span>" : "") +
+          (sp.amount ? '<span class="menudia__price">' + esc(sp.amount) + "</span>" : "") +
         "</div>" +
-        (note ? '<p class="menudia__note">' + esc(note) + "</p>" : "") +
+        (sp.extra ? '<p class="menudia__incl">' + esc(sp.extra) + "</p>" : "") +
+        notes.map(function (n) { return '<p class="menudia__note">' + esc(n) + "</p>"; }).join("") +
         '<div class="menudia__cols">' + cols + "</div>" +
         cta +
       "</div>";

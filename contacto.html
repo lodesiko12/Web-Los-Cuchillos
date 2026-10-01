@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title data-es="Reservas y contacto · Los Cuchillos, Almansa" data-en="Reservations &amp; contact · Los Cuchillos, Almansa">Reservas y contacto · Los Cuchillos, Almansa</title>
-<meta name="description" content="Reserva mesa en Los Cuchillos (Almansa) por teléfono o WhatsApp: 611 46 23 82. Dirección: C. Campo 76, 02640 Almansa. Consulta horario y cómo llegar." />
+<meta name="description" content="Reserva mesa online en Los Cuchillos (Almansa) o por teléfono y WhatsApp: 611 46 23 82. C. Campo 76, 02640 Almansa. Consulta horario y cómo llegar." />
 <link rel="canonical" href="https://lodesiko12.github.io/Web-Los-Cuchillos/contacto.html" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
 <meta name="theme-color" content="#100e0c" />
@@ -16,7 +16,7 @@
 <meta property="og:locale" content="es_ES" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta property="og:title" content="Reservas y contacto · Los Cuchillos, Almansa" />
-<meta property="og:description" content="Reserva por teléfono o WhatsApp: 611 46 23 82. C. Campo 76, Almansa. Horario y cómo llegar." />
+<meta property="og:description" content="Reserva online, por teléfono o WhatsApp: 611 46 23 82. C. Campo 76, Almansa. Horario y cómo llegar." />
 <meta property="og:url" content="https://lodesiko12.github.io/Web-Los-Cuchillos/contacto.html" />
 <meta property="og:image" content="https://lodesiko12.github.io/Web-Los-Cuchillos/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -24,10 +24,10 @@
 <meta property="og:image:alt" content="Restaurante Los Cuchillos · Almansa, desde 1973" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Reservas y contacto · Los Cuchillos, Almansa" />
-<meta name="twitter:description" content="Reserva por teléfono o WhatsApp: 611 46 23 82. C. Campo 76, Almansa." />
+<meta name="twitter:description" content="Reserva online, por teléfono o WhatsApp: 611 46 23 82. C. Campo 76, Almansa." />
 <meta name="twitter:image" content="https://lodesiko12.github.io/Web-Los-Cuchillos/og-image.jpg" />
 <link rel="stylesheet" href="fonts/fonts.css" />
-<link rel="stylesheet" href="css/site.css" />
+<link rel="stylesheet" href="css/site.css?v=4" />
 <script type="application/ld+json">
 [
 {
@@ -44,7 +44,7 @@
   "servesCuisine": ["Mediterránea", "Tradicional española", "Arroces", "Carnes a la brasa"],
   "foundingDate": "1973",
   "currenciesAccepted": "EUR",
-  "acceptsReservations": true,
+  "acceptsReservations": "https://lodesiko12.github.io/Web-Los-Cuchillos/contacto.html",
   "hasMenu": "https://lodesiko12.github.io/Web-Los-Cuchillos/carta.html",
   "address": {
     "@type": "PostalAddress",
@@ -82,7 +82,7 @@
     { "@type": "Question", "name": "¿Tenéis menú del día?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, disponemos de menú del día además de la carta. La carta cambia con la temporada y el mercado." } },
     { "@type": "Question", "name": "¿Qué días abrís? ¿Cerráis alguno?", "acceptedAnswer": { "@type": "Answer", "text": "Abrimos de jueves a martes; los miércoles permanecemos cerrados. Viernes y sábado abrimos también por la noche (20:30–24:00)." } },
     { "@type": "Question", "name": "¿Se puede reservar para grupos o celebraciones?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Disponemos de dos comedores, uno reservado para celebraciones, comidas de empresa y grupos. Avísanos al reservar y preparamos un menú a medida." } },
-    { "@type": "Question", "name": "¿Cómo reservo mesa?", "acceptedAnswer": { "@type": "Answer", "text": "Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web." } },
+    { "@type": "Question", "name": "¿Cómo reservo mesa?", "acceptedAnswer": { "@type": "Answer", "text": "Online, desde el formulario de reservas de esta misma página, o por teléfono y WhatsApp en el 611 46 23 82." } },
     { "@type": "Question", "name": "¿Dónde estáis y hay aparcamiento?", "acceptedAnswer": { "@type": "Answer", "text": "Estamos en C. Campo, 76, 02640 Almansa (Albacete), en pleno centro. Hay aparcamiento cercano en Rambla Centro." } }
   ]
 }
@@ -101,7 +101,7 @@
   </ul>
   <div class="nav-right">
     <div class="lang" role="group" aria-label="Idioma"><button data-lang="es" class="on">ES</button><button data-lang="en">EN</button></div>
-    <a class="nav-cta" href="tel:+34611462382" data-es="Reservar" data-en="Book">Reservar</a>
+    <a class="nav-cta" href="contacto.html#reservar" data-es="Reservar" data-en="Book">Reservar</a>
     <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -119,21 +119,38 @@
   <div class="wrap phero__inner">
     <span class="eyebrow reveal" data-es="Reservas" data-en="Reservations">Reservas</span>
     <h1 class="display reveal d1" style="margin-top:18px;font-size:clamp(2.6rem,7.5vw,6.4rem)" data-es="Reserva tu mesa" data-en="Book your table">Reserva tu mesa</h1>
-    <p class="lead reveal d2" style="max-width:48ch;margin-top:18px" data-es="Atendemos por teléfono y WhatsApp. Para arroces por encargo y grupos, avísanos al reservar." data-en="We take bookings by phone and WhatsApp. For rice to order and groups, let us know when you book.">Atendemos por teléfono y WhatsApp. Para arroces por encargo y grupos, avísanos al reservar.</p>
+    <p class="lead reveal d2" style="max-width:48ch;margin-top:18px" data-es="Reserva online en unos pasos, o por teléfono y WhatsApp. Para arroces por encargo y grupos, avísanos al reservar." data-en="Book online in a few steps, or by phone and WhatsApp. For rice to order and groups, let us know when you book.">Reserva online en unos pasos, o por teléfono y WhatsApp. Para arroces por encargo y grupos, avísanos al reservar.</p>
   </div>
 </header>
 
+<!-- RESERVA ONLINE (widget) -->
+<section class="section wrap" id="reservar" style="padding-bottom:clamp(48px,7vw,96px)">
+  <div class="contact-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-es="Reserva online" data-en="Online booking">Reserva online</span>
+      <h2 class="h-lg" style="margin:16px 0 22px" data-es="Elige día, hora y comensales" data-en="Pick a date, time and party size">Elige día, hora y comensales</h2>
+      <p class="muted" style="max-width:46ch" data-es="Reserva tu mesa en unos pasos desde aquí. Para arroces por encargo, grupos o celebraciones, indícalo en la reserva o llámanos." data-en="Book your table in a few steps right here. For rice to order, groups or celebrations, mention it in your booking or give us a call.">Reserva tu mesa en unos pasos desde aquí. Para arroces por encargo, grupos o celebraciones, indícalo en la reserva o llámanos.</p>
+      <p class="eyebrow mut" style="margin:34px 0 14px" data-es="¿Prefieres hablar con nosotros?" data-en="Prefer to talk to us?">¿Prefieres hablar con nosotros?</p>
+      <div class="hero__cues" style="justify-content:flex-start;margin:0">
+        <a class="btn" href="tel:+34611462382">611 46 23 82</a>
+        <a class="btn" href="https://wa.me/34611462382?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20Los%20Cuchillos" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div id="reservas-widget" data-slug="restaurante-la-plaza"></div>
+      <script src="https://turnigo-widget.lodesiko12.workers.dev/embed.js" async></script>
+      <noscript><p class="muted" style="text-align:center">Para reservar online activa JavaScript o llámanos al <a href="tel:+34611462382" style="color:var(--accent)">611 46 23 82</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACTO -->
-<section class="section wrap">
+<section class="section wrap" style="padding-top:0">
   <div class="contact-grid">
     <!-- columna info -->
     <div class="reveal">
-      <span class="eyebrow" data-es="Reserva ahora" data-en="Book now">Reserva ahora</span>
-      <h2 class="h-lg" style="margin:16px 0 26px" data-es="Llámanos o escríbenos" data-en="Call or message us">Llámanos o escríbenos</h2>
-      <div class="hero__cues" style="justify-content:flex-start;margin:0 0 14px">
-        <a class="btn btn--solid" href="tel:+34611462382">611 46 23 82</a>
-        <a class="btn" href="https://wa.me/34611462382?text=Hola%2C%20quer%C3%ADa%20reservar%20mesa%20en%20Los%20Cuchillos" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
+      <span class="eyebrow" data-es="Visítanos" data-en="Visit us">Visítanos</span>
+      <h2 class="h-lg" style="margin:16px 0 18px" data-es="Dónde estamos" data-en="Where to find us">Dónde estamos</h2>
 
       <div class="info-row">
         <span class="k" data-es="Dirección" data-en="Address">Dirección</span>
@@ -198,7 +215,7 @@
     </details>
     <details class="faq__item">
       <summary data-es="¿Cómo reservo mesa?" data-en="How do I book a table?">¿Cómo reservo mesa?</summary>
-      <p data-es="Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web." data-en="By phone or WhatsApp at +34 611 46 23 82. We do not take bookings through a web form.">Por teléfono o WhatsApp en el 611 46 23 82. No disponemos de reserva por formulario web.</p>
+      <p data-es="Online, desde el formulario de reservas de esta misma página, o por teléfono y WhatsApp en el 611 46 23 82." data-en="Online, using the booking form on this very page, or by phone and WhatsApp at +34 611 46 23 82.">Online, desde el formulario de reservas de esta misma página, o por teléfono y WhatsApp en el 611 46 23 82.</p>
     </details>
     <details class="faq__item">
       <summary data-es="¿Dónde estáis y hay aparcamiento?" data-en="Where are you and is there parking?">¿Dónde estáis y hay aparcamiento?</summary>
@@ -241,6 +258,6 @@
   </div>
 </footer>
 
-<script src="js/site.js"></script>
+<script src="js/site.js?v=2"></script>
 </body>
 </html>

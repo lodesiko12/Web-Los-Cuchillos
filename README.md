@@ -56,7 +56,8 @@ cualquier hosting estático (Hostinger, Netlify, GitHub Pages…) por drag & dro
 - **Animaciones de aparición** y parallax suave; respetan `prefers-reduced-motion`.
 - **Carta**: índice sticky con enlace activo según scroll.
 - **Horario**: el día actual se resalta automáticamente.
-- Reservas mediante enlaces `tel:` y `wa.me` (sin formulario, por decisión del cliente).
+- **Reservas online** con el widget de Turnigo (iframe) en `contacto.html#reservar`; el botón
+  «Reservar» del menú y los CTAs de Inicio y Carta llevan ahí. Teléfono y WhatsApp quedan como alternativa.
 
 ## SEO
 
@@ -116,6 +117,15 @@ publicado como CSV, para que el restaurante los edite sin tocar código (cambian
 - **SEO**: el contenido de la carta pasa a cargarse por JavaScript (Google lo renderiza e indexa).
   Lo que más posiciona —título, meta-descripción y ficha `Restaurant`— sigue estático en el HTML.
 - ⏱️ Los cambios en el Sheet tardan unos minutos en propagarse (caché de Google).
+
+## Reservas online (widget Turnigo)
+
+- Código en `contacto.html` (sección `#reservar`): `<div id="reservas-widget" data-slug="restaurante-la-plaza">`
+  + `embed.js` de `turnigo-widget.lodesiko12.workers.dev`. El script solo inserta un iframe aislado.
+- El restaurante gestiona las reservas desde su panel del sistema (no desde esta web).
+- **Legal**: el widget trata datos personales y usa almacenamiento del navegador; está reflejado en
+  `privacidad.html` y `cookies.html`. Hay un `[COMPLETAR]` para confirmar los datos del proveedor.
+- Si cambia el slug o la URL del widget, edítalo solo en `contacto.html`.
 
 ## Legal y cookies
 

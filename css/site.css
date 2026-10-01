@@ -466,16 +466,19 @@ p{ text-wrap:pretty; }
 .legal a:hover{ border-color:var(--accent); }
 .legal .updated{ font-size:.8rem; color:var(--ink-mut); letter-spacing:.06em; }
 .legal table{ width:100%; border-collapse:collapse; margin:14px 0 24px; font-size:.9rem; }
-.legal th, .legal td{ text-align:left; padding:10px 12px; border:1px solid var(--line); color:var(--ink-dim); vertical-align:top; }
+.legal th, .legal td{ text-align:left; padding:10px 12px; border:1px solid var(--line); color:var(--ink-dim); vertical-align:top; overflow-wrap:anywhere; }
+.legal table{ table-layout:fixed; }
 .legal th{ color:var(--ink); font-family:var(--font-sans); font-weight:500; background:var(--bg-2); }
 .legal .placeholder{ color:var(--accent); font-weight:500; }
+.legal .btn{ white-space:normal; max-width:100%; text-align:center; }
 
 /* ============================================================
    MENÚ DEL DÍA (dinámico)
    ============================================================ */
 .menudia{ border:1px solid var(--line-2); background:var(--bg-2); padding:clamp(28px,4vw,48px); }
 .menudia__top{ display:flex; align-items:baseline; justify-content:space-between; gap:18px; flex-wrap:wrap; }
-.menudia__price{ font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--accent); white-space:nowrap; }
+.menudia__price{ font-family:var(--font-display); font-size:clamp(1.6rem,3vw,2.4rem); color:var(--accent); overflow-wrap:anywhere; }
+.menudia__incl{ color:var(--ink-dim); font-size:.95rem; margin:8px 0 0; }
 .menudia__note{ color:var(--ink-mut); font-size:.92rem; margin:10px 0 0; }
 .menudia__cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,4vw,48px); margin-top:clamp(24px,3vw,36px); }
 @media(max-width:760px){ .menudia__cols{ grid-template-columns:1fr; gap:26px; } }
@@ -510,3 +513,11 @@ p{ text-wrap:pretty; }
 .cookie__btns{ display:flex; gap:12px; flex-wrap:wrap; }
 .cookie .btn{ padding:.85em 1.6em; font-size:.72rem; }
 @media(max-width:620px){ .cookie__btns{ width:100%; } .cookie .btn{ flex:1; justify-content:center; } }
+
+/* ============================================================
+   WIDGET DE RESERVAS (iframe externo)
+   ============================================================ */
+#reservar{ scroll-margin-top:90px; }
+/* reserva hueco hasta que el script monta el iframe (evita saltos de layout) */
+#reservas-widget:not([data-reservas-mounted]){ min-height:620px; }
+#reservas-widget iframe{ border-radius:2px; }
